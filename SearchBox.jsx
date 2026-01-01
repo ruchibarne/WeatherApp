@@ -21,7 +21,7 @@ export default function SearchBox({updateInfo}){
 
             
             let result = {
-                city:jsonResponse.main.city,
+                city:jsonResponse.name,
                 temp: jsonResponse.main.temp,
                 tempMin: jsonResponse.main.temp_min,
                 tempMax:jsonResponse.main.temp_max,
@@ -59,13 +59,14 @@ export default function SearchBox({updateInfo}){
         <div className="SearchBox"> 
             <form onSubmit={handleSubmit}>
                  <TextField id="city" label="City Name" variant="outlined" value={city} onChange={handleChange}/>
-            </form>
             <br></br>
             <Button variant="contained" className='btn' type='submit'>Search</Button>
+            </form>
             {error && <p>No such place exits!</p>}
         </div>
     );
 }
+
 
 
 
