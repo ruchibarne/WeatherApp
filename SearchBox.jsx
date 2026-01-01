@@ -59,13 +59,15 @@ export default function SearchBox({updateInfo}){
         <div className="SearchBox"> 
             <form onSubmit={handleSubmit}>
                  <TextField id="city" label="City Name" variant="outlined" value={city} onChange={handleChange}/>
-            <br></br>
+            <br/>
+            <br/>
             <Button variant="contained" className='btn' type='submit'>Search</Button>
             </form>
             {error && <p>No such place exits!</p>}
         </div>
     );
 }
+
 
 
 
